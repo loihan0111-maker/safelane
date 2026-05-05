@@ -51,7 +51,7 @@ def get_vehicles(
         
         response.raise_for_status()
         data = response.json()
-        
+    
         # Ma'lumotlarni filtrlash
         filtered_data = [
             {
@@ -59,7 +59,7 @@ def get_vehicles(
                 "driver": item.get("full_name"),
                 "lat": item.get("location_lat"),
                 "lon": item.get("location_lon"),
-                "odometer": item.get("odometer"),
+                "odometer": item.get("odometer")*0.621371,
                 "engine_hours": item.get("engine_hours")
             }
             for item in data

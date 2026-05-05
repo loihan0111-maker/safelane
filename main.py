@@ -56,6 +56,7 @@ def get_vehicles(
         filtered_data = [
             {
                 "id": item.get("name"),
+                "vin": item.get("vin"),
                 "driver": item.get("full_name"),
                 "lat": item.get("location_lat"),
                 "lon": item.get("location_lon"),
